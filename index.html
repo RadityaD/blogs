@@ -53,7 +53,8 @@ title: Mainpage
             {% if count == paginator.page %}
             <span class="current-page">{{count}}</span>
             {% else %}
-            <a href="{{ site.paginate_path}}/page{{count}}">{{count}}</a>
+            <!--<a href="{{ site.paginate_path}}/page{{count}}">{{count}}</a>-->
+            <a href="{{site.paginate_path}}">{{count}}</a>
             {% endif %}
           </li>
           {% endfor %}
@@ -61,7 +62,8 @@ title: Mainpage
 
         {% if paginator.next_page %}
         <p class="next">
-          <a href="{{ site.paginate_path}}/page{{paginator.next_page}}">Next</a>
+          <a href="{{site.paginate_path}}">Next</a>
+          <!--<a href="{{ site.paginate_path}}/page{{paginator.next_page}}">Next</a>-->
         </p>
         {% else %}
 <!--         <p class="next disabled">
